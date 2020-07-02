@@ -1,3 +1,21 @@
 
+tcl 网站资源
+https://wiki.tcl-lang.org
+
 文件复制
 file copy source_file dest
+
+获取当前脚本的文件名
+set file_name [info script]
+
+获取全路径名
+set file_name [file normalize [info script]]
+
+获取文件所在路径
+set file_dir [file dirname $file_name]
+
+“”双引号内的变量会被替换 ,但{}之间出现的变量不会进行替换
+
+set var "hello"
+puts "$var chank" --> hello chank
+puts {$var chank} --> $var chank
